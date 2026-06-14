@@ -5,7 +5,7 @@ import { tool } from "@langchain/core/tools";
 import { MemorySaver } from "@langchain/langgraph";
 import { ChatOpenAI } from "@langchain/openai";
 import { z } from "zod";
-import { getProductBySku } from "./inventory-mock.mjs";
+import { getProductBySku } from "../inventory-mock.mjs";
 
 const getProductStock = tool(
     async ({ sku }) => getProductBySku(sku),
